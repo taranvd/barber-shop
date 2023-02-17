@@ -13,6 +13,14 @@ body {
 	/* font-family: 'Raleway', sans-serif; */
 }
 
+.list {
+	list-style: none;
+}
+
+.link {
+	text-decoration: none;
+}
+
 /* Header style start */
 .header {
 	background-color: grey;
@@ -42,5 +50,13 @@ body {
 	color: #ffffff;
 }
 .header-btn {
+	font-family: inherit;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1.33;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	color: #ffffff;
 }
 /* Header style end */
