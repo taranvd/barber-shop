@@ -1,0 +1,46 @@
+/* @font-face {
+	font-family: "Open Sans";
+	src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Open Sans Bold";
+	src: url(../fonts/OpenSans-Bold.ttf);
+} */
+
+body {
+	font-family: "Open Sans", sans-serif;
+	/* font-family: 'Raleway', sans-serif; */
+}
+
+/* Header style start */
+.header {
+	background-color: grey;
+}
+.header-nav {
+}
+.header-logo {
+}
+.header-list {
+}
+.header-item {
+}
+.header-link {
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1.33;
+	letter-spacing: 0.1em;
+	color: #ffffff;
+}
+.header-tel {
+	font-style: normal;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 1.33;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.header-btn {
+}
+/* Header style end */
