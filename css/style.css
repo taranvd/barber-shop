@@ -3,11 +3,38 @@
 	--secondary-title-color: #303030;
 	--accent-color: #ff6c00;
 	--secondary-font: "Raleway", sans-serif;
+	--basic-margin: 20px;
 }
 
 body {
 	font-family: "Open Sans", sans-serif;
 	/* font-family: 'Raleway', sans-serif; */
+}
+
+.container {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+	outline: 1px solid red;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	display: block;
 }
 
 .list {
@@ -60,6 +87,7 @@ body {
 /* -------- Header style start ------- */
 .header {
 	background-color: grey;
+	padding: 32px 0;
 }
 .header-nav {
 }
@@ -118,9 +146,11 @@ body {
 }
 
 .hero-subtitle {
+	margin-bottom: var(--basic-margin);
 	color: rgba(157, 164, 189, 0.6);
 }
 .hero-title {
+	margin-bottom: var(--basic-margin);
 	font-family: "Raleway";
 	font-weight: 700;
 	font-size: 72px;
@@ -133,11 +163,13 @@ body {
 	line-height: 1.66;
 	letter-spacing: 0.02em;
 	color: #9da4bd;
+	width: 360px;
 }
 /* ----------- Hero section style end  --------- */
 
 /* ----------- About section style start  --------- */
 .about {
+	padding: 120px 0;
 }
 .about-list {
 }
@@ -147,14 +179,18 @@ body {
 }
 .about-subtitle {
 	color: var(--secondary-title-color);
+	margin-bottom: var(--basic-margin);
 }
 .about-title {
 	color: var(--secondary-title-color);
+	margin-bottom: var(--basic-margin);
 }
 
 .about-desc span {
+	display: block;
 	font-size: 18px;
 	line-height: 1.67;
+	margin-bottom: var(--basic-margin);
 }
 
 .about-desc {
@@ -162,6 +198,7 @@ body {
 	line-height: 1.86;
 	letter-spacing: 0.02em;
 	color: #555555;
+	margin-bottom: 42px;
 }
 
 .about-btn {
@@ -171,21 +208,34 @@ body {
 
 /* ----------- Services section style start  --------- */
 .services {
+	padding: 120px 0;
 }
 .services-subtitle {
 	color: rgba(157, 164, 189, 0.6);
+	margin-bottom: var(--basic-margin);
 }
 .services-title {
 	color: var(--main-title-color);
+	margin-bottom: 44px;
+}
+
+.services-list {
+	border: 1px solid red;
+	padding: 30px 20px;
 }
 
 .services-item {
+}
+
+.services-item:not(:last-child) {
+	margin-bottom: var(--basic-margin);
+}
+
+.services-item-text {
 	font-size: 18px;
 	line-height: 1.67;
 	letter-spacing: 0.02em;
 	color: #9da4bd;
-}
-.services-item-text {
 }
 .services-btn {
 	color: #ffffff;
