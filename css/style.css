@@ -34,6 +34,8 @@ ul {
 
 img {
 	display: block;
+	height: auto;
+	width: 100%;
 }
 
 .list {
@@ -60,6 +62,14 @@ img {
 	border: 1px solid var(--accent-color);
 	border-radius: 25px;
 	padding: 12px 20px;
+
+	transition: color 0.35s linear, background-color 0.35s linear;
+}
+
+.btn:hover,
+.btn:focus {
+	color: white;
+	background-color: var(--accent-color);
 }
 
 .title {
@@ -103,7 +113,10 @@ img {
 
 /* -------- Header style start ------- */
 .header {
-	background-color: grey;
+	position: absolute;
+	top: 0;
+	left: 0;
+
 	padding: 32px 0;
 }
 
@@ -130,6 +143,22 @@ img {
 	line-height: 1.33;
 	letter-spacing: 0.1em;
 	color: #ffffff;
+
+	position: relative;
+	transition: color 0.35s linear;
+}
+.header-link.active {
+	color: var(--accent-color);
+}
+
+.header-link.active::after {
+	content: "";
+	width: 100%;
+	height: 3px;
+	background-color: var(--accent-color);
+	position: absolute;
+	left: 0;
+	bottom: -10px;
 }
 
 .header-link:hover,
@@ -156,6 +185,7 @@ img {
 	border-radius: 25px;
 	padding: 12px 20px;
 }
+
 /* ------ Header style end ------ */
 
 /* ------- Hero section style start ------- */
@@ -167,6 +197,26 @@ img {
 }
 .hero-list {
 	max-width: 100px;
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	transform: rotate(-90deg) translateY(100%);
+	transform-origin: bottom left;
+	padding-top: 30px;
+}
+
+.hero-list::before {
+	content: "";
+	width: 60px;
+	height: 1px;
+	background-color: #303030;
+	display: block;
+	padding-right: 60px;
+}
+
+.hero-list-wrap {
+	display: flex;
+	align-items: flex-end;
 }
 
 .hero-content {
@@ -187,6 +237,8 @@ img {
 	line-height: 1.33;
 	letter-spacing: 0.2em;
 	color: #303030;
+
+	transition: color 0.3s linear;
 }
 
 .hero-link:hover,
@@ -380,7 +432,6 @@ img {
 }
 
 .benefits-item span {
-	display: flex;
 	align-items: start;
 	font-weight: 700;
 	font-size: 42px;
@@ -388,7 +439,9 @@ img {
 	text-align: center;
 	letter-spacing: 0.05em;
 	color: #303030;
-	background-color: F7F7F7;
+	background-color: #f7f7f7;
+
+	position: relative;
 }
 
 .benefits-item span::after {
@@ -397,6 +450,10 @@ img {
 	font-size: 16px;
 	line-height: calc(22 / 16);
 	color: var(--accent-color);
+
+	position: absolute;
+	right: -10px;
+	top: 7px;
 }
 
 .benefits-item-text {
@@ -444,6 +501,7 @@ img {
 .barbers-item {
 	width: calc((100% - 60px) / 3);
 }
+
 .barbers-item-title {
 	margin-bottom: 8px;
 	font-size: 18px;
@@ -486,6 +544,8 @@ img {
 	border-radius: 50%;
 
 	color: #000;
+
+	transition: color 0.35s linear, background-color 0.35s linear;
 }
 
 .barbers-social-link:is(:hover, :focus) {
@@ -495,6 +555,31 @@ img {
 
 .bargers-social-icon {
 	fill: currentColor;
+}
+
+.barbers-top-wrap {
+	position: relative;
+	overflow: hidden;
+}
+
+.barbers-item-text-overlay {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 20px;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	transform: translateY(100%);
+	transition: transform 0.35s linear;
+	overflow: auto;
+}
+
+.barbers-item:hover .barbers-item-text-overlay {
+	transform: translateY(0);
 }
 /* ----------- Barbers section style end  --------- */
 
